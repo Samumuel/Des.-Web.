@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item A">A</div>
+        <div class="item B">B</div>
+        <div class="item C">C</div>
+        <div class="item D">D</div>
+        <div class="item E">E</div>
+    </div>
+</body>
+</html>
+
+<style>
+    .container {
+        display: flex;
+        background-color: rgb(35, 60, 199);
+        height: 500px;
+        border-radius: 2px;
+        justify-content: space-evenly;
+    }
+    .item{
+        font-size: 50px;
+        background-color: tomato;
+        padding: 80px;
+        border-radius: 10px;
+    }
+    .A{
+        align-self: start;
+    }
+    .B{
+        align-self: stretch;
+    }
+    .C{
+        align-self: center;
+    }
+    .D{
+        align-self: end;
+    }
+    .E{
+        align-self: flex-start ;
+    }
+</style>
