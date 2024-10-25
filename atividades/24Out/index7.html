@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Dipper Pines</h1>
+    <img src="depper.jpg" alt="Dipper Pines" id="dipper">
+    <p id="resposta">Passe o mouse sobre o Dipper para interagir!</p>
+
+    <script>
+        const dipper = document.getElementById('dipper');
+        const resposta = document.getElementById('resposta');
+
+        dipper.addEventListener('mouseenter', function() {
+            resposta.textContent = "Opa, eu gosto de mistérios.";
+        });
+
+        dipper.addEventListener('mouseleave', function() {
+            resposta.textContent = "Até mais!";
+        });
+
+        dipper.addEventListener('mousemove', function(event) {
+            resposta.textContent = `Estou aqui! (${event.clientX}, ${event.clientY})`;
+        });
+
+        dipper.addEventListener('click', function() {
+            resposta.textContent = "Mistérios são melhores em dupla!";
+        });
+    </script>
+</body>
+</html>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    img {
+        width: 200px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+    #resposta {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+</style>

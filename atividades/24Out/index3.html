@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1 id="meuTitulo">Título Original</h1>
+    <button id="alterar">Alterar Título</button>
+
+    <script>
+        document.getElementById('alterar').addEventListener('click', function() {
+            const h1 = document.getElementById('meuTitulo');
+            h1.textContent = 'Novo Título!';
+            h1.style.color = 'blue'; // Muda a cor
+            h1.style.fontSize = '40px'; // Muda o tamanho
+        });
+    </script>
+</body>
+</html>

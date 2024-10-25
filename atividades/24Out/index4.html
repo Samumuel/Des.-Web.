@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <p id="contador">0</p>
+    <button id="incrementar">Clique aqui</button>
+
+    <script>
+        let count = 0;
+
+        const contadorElemento = document.getElementById('contador');
+        const botao = document.getElementById('incrementar');
+
+        botao.addEventListener('click', function() {
+            count++;
+            contadorElemento.textContent = count;
+        });
+    </script>
+</body>
+</html>
+

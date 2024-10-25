@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <h1>Gerador de Nome de Aventuras</h1>
+    <p id="nomeAventura">Clique no botão para gerar um nome!</p>
+    <button id="gerarNome">Gerar Nome de Aventura</button>
+
+    <script>
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+        const nomeAventuraElemento = document.getElementById('nomeAventura');
+        const botao = document.getElementById('gerarNome');
+
+        function gerarNomeAventura() {
+            const title = titles[Math.round(Math.random() * (titles.length - 1))];
+            const name = names[Math.round(Math.random() * (names.length - 1))];
+            const classType = classes[Math.round(Math.random() * (classes.length - 1))];
+            const location = locations[Math.round(Math.random() * (locations.length - 1))];
+
+            const nomeCompleto = `${title} ${name}, o ${classType} de ${location}`;
+            nomeAventuraElemento.textContent = nomeCompleto;
+        }
+
+        botao.addEventListener('click', gerarNomeAventura);
+    </script>
+</body>
+</html>
